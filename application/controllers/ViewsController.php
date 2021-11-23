@@ -2,9 +2,10 @@
 namespace application\controllers;
 use application\core\Controller;
 
-class NewsController extends Controller
+
+class ViewsController extends Controller
 {
     public function show(){
-        $this->view->render('Новости');
+        echo 'Piece of news';
     }
 }
