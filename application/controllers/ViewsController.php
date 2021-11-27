@@ -6,6 +6,10 @@ use application\core\Controller;
 class ViewsController extends Controller
 {
     public function show(){
-        echo 'Piece of news';
+        $id = !empty($_GET['id'])?$_GET['id']:1;
+        $vars = [
+            'text'=>$this->model->getText($id)[0],
+        ];
+        $this->view->render('Новость', $vars);
     }
 }

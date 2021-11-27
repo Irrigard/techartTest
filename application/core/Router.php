@@ -8,14 +8,14 @@ class Router
 
     public function __construct()
     {
-        $arr = require APP_ROOT_DIR . '/application/config/routes.php';
+        $arr = require APP_ROOT_DIR . '\application\config\routes.php';
         foreach ($arr as $key => $value){
             $this->add($key, $value);
         }
     }
 
     public function add($route, $params) {
-        $route = '#^' . $route . '$#';
+        $route = '#^' . $route . '\?*.*$#';
         $this->routes[$route] = $params;
     }
 

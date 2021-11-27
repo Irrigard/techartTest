@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?php echo $title; ?></title>
+    <title><?= $title ?></title>
 </head>
-<body>
-    <?php echo $content; ?>
+<body style="background-color: #EDEFEB;">
+    <?= $content ?>
 </body>
 </html>
